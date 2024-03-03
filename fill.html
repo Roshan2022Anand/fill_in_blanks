@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hang man</title>
+    <link rel="stylesheet" href="fill.css">
 </head>
 <body>
-    
+    <header>Hang Man</header>
+    <div id="main">
+        <span id="human">
+            <div id="face">
+                <div class="eye" id="eye1">⚫</div>
+                <div class="eye" id="eye2">⚫</div>
+                <div id="mouth">👄</div>
+            </div>
+            <div id="body">
+                <div id="right-hand"></div>
+                <div id="chest"></div>
+                <div id="left-hand"></div>
+            </div>
+            <div id="legs">
+                <div id="left-leg"></div>
+                <div id="right-leg"></div>
+            </div>
+        </span>
+        <div id="stand">
+            <div id="stand1"></div>
+            <div id="stand2"></div>
+        </div>
+        <div id="hang">
+            <img src="/fill_in_blanks\Untitled.png" alt="">
+        </div>
+        <div id="rope">
+
+        </div>
+    </div>
+    <section id="answer-screen">
+        <p>Guess the word</p>
+        <div id="fill-input">a0</div>
+        <form id="form">
+            <label for="user-input">
+                Enter the letter here :
+                <input type="text"  id="user-input" maxlength="1" >
+            </label>
+            <label for="">
+                <input type="button" value="ENTER" id="enter-btn">
+            </label>
+        </form>
+        <p id="winner"></p>
+        <input type="button" value="RESET" id="reset-btn">
+    </section>
+    <script src="fill.js"></script>
 </body>
 </html>
