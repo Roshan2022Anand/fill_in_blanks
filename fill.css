@@ -17,9 +17,11 @@ header {
     height: 500px;
     margin: 10px auto;
 }
-#human{
+
+#human {
     z-index: 100;
 }
+
 #face {
     width: 90px;
     height: 90px;
@@ -32,16 +34,19 @@ header {
     display: flex;
     justify-content: space-around;
 }
-.eye{
+
+.eye {
     position: relative;
     top: 20px;
     left: 15px;
 }
-#mouth{
+
+#mouth {
     position: relative;
     top: 50px;
     right: 30px;
 }
+
 #right-hand {
     height: 80px;
     width: 2px;
@@ -69,9 +74,6 @@ header {
     top: 119px;
     left: 42.5%;
 }
-
-#legs {}
-
 #left-leg {
     height: 80px;
     width: 2px;
@@ -100,6 +102,7 @@ header {
     bottom: 457px;
     left: 72.5%;
 }
+
 #stand2 {
     height: 187px;
     width: 7px;
@@ -109,6 +112,7 @@ header {
     left: 57.5%;
     transform: rotate(270deg);
 }
+
 #hang2 {
     position: relative;
     width: 2px;
@@ -117,7 +121,8 @@ header {
     bottom: 1024px;
     left: 42.6%;
 }
-img{
+
+img {
     width: 70px;
     height: 200px;
     position: relative;
@@ -125,7 +130,8 @@ img{
     left: 38.5%;
     z-index: -1;
 }
-#rope{
+
+#rope {
     position: relative;
     bottom: 1047px;
     left: 39%;
@@ -134,33 +140,54 @@ img{
     border-radius: 50%;
     border-bottom: 5px solid;
 }
-#answer-screen{
+
+#answer-screen {
     text-align: center;
 }
-p{
+
+p {
     font-size: 30px;
     margin: 10px 0;
 }
-#user-input{
-    width: 20px;
+
+#user-input {
+    width: 50px;
+    font-size: 30px;
+    color: orange;
 }
-#fill-input{
+
+#fill-input {
     font-size: 30px;
 }
 
-.deadBody{
+.deadBody {
     position: relative;
     animation: hangup 2s ease-out;
-    bottom:50px;
+    bottom: 50px;
 }
-@keyframes hangup{
-    0%{
+
+@keyframes hangup {
+    0% {
         bottom: 10px;
     }
-    50%{
+
+    50% {
         bottom: 30px;
     }
-    100%{
+
+    100% {
         bottom: 50px;
     }
+}
+
+form {
+    font-size: 30px;
+}
+input[type='button'] {
+    height: 30px;
+    width: 50px;
+    border: none;
+    border: 1px solid rgb(241, 205, 151);
+    background-color: blanchedalmond;
+    border-radius: 10px;
 }

@@ -83,7 +83,6 @@ enterBtn.addEventListener("click", () => {
             if(fillWrd[i] == " _ ")
             if (input == wrdArr[wrd][i]) {
                 console.log(input,wrdArr[wrd][i],fillWrd[i]);
-                
                 fillWrd[i] = input;
                 correct++
             }
