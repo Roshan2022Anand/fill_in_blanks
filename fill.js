@@ -73,27 +73,32 @@ const reset = () => {
     fillInput.innerText = fillWrd.join("");
 }
 //function to enter the user input to the blank statement
-enterBtn.addEventListener("click", () => {
-    let input = userInput.value;
-    if (input == "")
-        alert("Please enter the letter")
-    else {
-        let correct = 0;
-        for (let i = 0; i < fillWrd.length; i++)
-            if(fillWrd[i] == " _ ")
-            if (input == wrdArr[wrd][i]) {
-                console.log(input,wrdArr[wrd][i],fillWrd[i]);
-                fillWrd[i] = input;
-                correct++
-            }
-        fillInput.innerText = fillWrd.join("");
-        if (fillWrd.join("") == wrdArr[wrd])
-            winner();
-        else if (correct == 0)
-            wrongAns();
+const checkTheInput = () => {
+  let input = userInput.value;
+  if (input == "") alert("Please enter the letter");
+  else {
+    let correct = 0;
+    for (let i = 0; i < fillWrd.length; i++)
+      if (fillWrd[i] == " _ ")
+        if (input == wrdArr[wrd][i]) {
+          console.log(input, wrdArr[wrd][i], fillWrd[i]);
+          fillWrd[i] = input;
+          correct++;
+        }
+    fillInput.innerText = fillWrd.join("");
+    if (fillWrd.join("") == wrdArr[wrd]) winner();
+    else if (correct == 0) wrongAns();
+  }
+  userInput.value = "";
+};
+document.addEventListener("keydown",(event)=>{
+    if(event.code === 'Enter'){
+        event.preventDefault();
+        checkTheInput();
     }
-    userInput.value = "";
 })
+enterBtn.addEventListener("click",checkTheInput)
+
 reset();
 resetBtn.addEventListener("click", () => { reset() })
 
